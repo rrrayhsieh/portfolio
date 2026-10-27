@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-Hant" data-lang="zh" data-title-en="Contact | Ray Hsieh" data-desc-en="Tell me about your project, needs and budget, and I&#x27;ll reply with an approach and a quote.">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>聯絡｜謝岱霖 Ray Hsieh</title>
+<meta name="description" content="告訴我你的專案類型、需求與預算，我會回信附上做法與報價。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="聯絡｜謝岱霖 Ray Hsieh">
+<meta property="og:description" content="告訴我你的專案類型、需求與預算，我會回信附上做法與報價。">
+<meta property="og:image" content="https://rrrayhsieh-debug.github.io/portfolio/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#fcfbf8">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/icon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="assets/icon-180.png">
+<script>
+  (function () {
+    var d = document.documentElement;
+    d.classList.add('js');
+    try {
+      var q = new URLSearchParams(location.search).get('lang');
+      var l = q || localStorage.getItem('lang');
+      if (l === 'en') { d.setAttribute('data-lang', 'en'); d.lang = 'en'; }
+    } catch (e) {}
+  })();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&amp;family=Noto+Sans+TC:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="assets/css/site.css?v=2964631f">
+</head>
+<body>
+<a class="skip" href="#main"><span data-l="zh">跳到內容</span><span data-l="en">Skip to content</span></a>
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="logo" href="index.html">Ray Hsieh</a>
+    <nav class="nav-links" id="menu" aria-label="主選單" data-aria-en="Main">
+      <a href="work.html"><span data-l="zh">作品</span><span data-l="en">Work</span></a>
+      <a href="about.html"><span data-l="zh">關於</span><span data-l="en">About</span></a>
+      <div class="lang" role="group" aria-label="語言" data-aria-en="Language">
+        <button type="button" data-set-lang="zh" aria-pressed="true" lang="zh-Hant">中文</button>
+        <button type="button" data-set-lang="en" aria-pressed="false" lang="en">EN</button>
+      </div>
+    </nav>
+    <a class="btn btn-dark nav-cta" href="contact.html" aria-current="page"><span data-l="zh">聯絡我</span><span data-l="en">Contact</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="選單" data-aria-en="Menu" data-menu>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path class="m1" d="M4 8h16"/><path class="m2" d="M4 16h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+<section class="contact">
+  <div class="glow side" aria-hidden="true"><i></i><i></i><i></i></div>
+  <div class="wrap contact-in">
+    <div>
+      <h1 class="h1"><span data-l="zh">聊聊你的專案</span><span data-l="en">Tell me about your project</span></h1>
+      <p class="lead"><span data-l="zh">告訴我你想做什麼、預算大概多少。我看過之後回信，附上建議的做法與報價。</span><span data-l="en">Tell me what you have in mind and roughly what the budget is. I’ll reply with a suggested approach and a quote.</span></p>
+      <div class="direct">
+        <a href="mailto:rrrayhsieh@gmail.com?subject=%E4%BD%9C%E5%93%81%E9%9B%86%E4%BE%86%E4%BF%A1" data-href-en="mailto:rrrayhsieh@gmail.com?subject=Portfolio%20enquiry"><span><small>Email</small>rrrayhsieh@gmail.com</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+        <a href="https://www.linkedin.com/in/tailinhsieh" rel="noopener" target="_blank"><span><small>LinkedIn</small>linkedin.com/in/tailinhsieh</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg></a>
+      </div>
+    </div>
+
+    <form class="form card" id="form" data-contact novalidate>
+      <div class="row2">
+        <div class="field"><label for="f-name"><span data-l="zh">怎麼稱呼你</span><span data-l="en">Your name</span></label><input type="text" id="f-name" name="name" autocomplete="name" required placeholder="王小明" data-placeholder-en="Jane Chen"></div>
+        <div class="field"><label for="f-email">Email</label><input type="email" id="f-email" name="email" autocomplete="email" required placeholder="you@company.com"></div>
+      </div>
+      <div class="field"><label for="f-org"><span data-l="zh">公司或品牌</span><span data-l="en">Company or brand</span><small><span data-l="zh">選填</span><span data-l="en">optional</span></small></label><input type="text" id="f-org" name="org" autocomplete="organization" placeholder="例如：某某咖啡" data-placeholder-en="e.g. Acme Coffee"></div>
+      <fieldset class="field">
+        <legend><span data-l="zh">專案類型</span><span data-l="en">Project type</span><small><span data-l="zh">可複選</span><span data-l="en">choose any</span></small></legend>
+        <div class="chips"><label><input type="checkbox" name="type" value="品牌影片" data-key="brand"><span><span data-l="zh">品牌影片</span><span data-l="en">Brand film</span></span></label><label><input type="checkbox" name="type" value="產品影片" data-key="product"><span><span data-l="zh">產品影片</span><span data-l="en">Product film</span></span></label><label><input type="checkbox" name="type" value="線上課程" data-key="course"><span><span data-l="zh">線上課程</span><span data-l="en">Online course</span></span></label><label><input type="checkbox" name="type" value="短影音" data-key="shorts"><span><span data-l="zh">短影音</span><span data-l="en">Shorts</span></span></label><label><input type="checkbox" name="type" value="AI 短影音流程" data-key="ai"><span><span data-l="zh">AI 短影音流程</span><span data-l="en">AI short-video workflow</span></span></label><label><input type="checkbox" name="type" value="其他" data-key="other"><span><span data-l="zh">其他</span><span data-l="en">Other</span></span></label></div>
+      </fieldset>
+      <div class="field"><label for="f-need"><span data-l="zh">想做什麼</span><span data-l="en">What do you have in mind?</span></label><textarea id="f-need" name="need" required placeholder="例如：新產品下個月上市，需要一支 60 秒產品影片和三支短影音。" data-placeholder-en="e.g. A product launches next month; we need a 60-second product film and three shorts."></textarea></div>
+      <fieldset class="field">
+        <legend><span data-l="zh">預算範圍</span><span data-l="en">Budget</span></legend>
+        <div class="chips"><label><input type="radio" name="budget" value="NT$3 萬以下"><span><span data-l="zh">NT$3 萬以下</span><span data-l="en">Under NT$30k</span></span></label><label><input type="radio" name="budget" value="3–10 萬"><span><span data-l="zh">3–10 萬</span><span data-l="en">NT$30k–100k</span></span></label><label><input type="radio" name="budget" value="10–30 萬"><span><span data-l="zh">10–30 萬</span><span data-l="en">NT$100k–300k</span></span></label><label><input type="radio" name="budget" value="30 萬以上"><span><span data-l="zh">30 萬以上</span><span data-l="en">Over NT$300k</span></span></label><label><input type="radio" name="budget" value="還不確定"><span><span data-l="zh">還不確定</span><span data-l="en">Not sure yet</span></span></label></div>
+      </fieldset>
+      <fieldset class="field">
+        <legend><span data-l="zh">希望什麼時候完成</span><span data-l="en">Timeline</span></legend>
+        <div class="chips"><label><input type="radio" name="when" value="一個月內"><span><span data-l="zh">一個月內</span><span data-l="en">Within a month</span></span></label><label><input type="radio" name="when" value="1–3 個月"><span><span data-l="zh">1–3 個月</span><span data-l="en">1–3 months</span></span></label><label><input type="radio" name="when" value="3 個月以上"><span><span data-l="zh">3 個月以上</span><span data-l="en">Over 3 months</span></span></label><label><input type="radio" name="when" value="還沒決定"><span><span data-l="zh">還沒決定</span><span data-l="en">Not decided</span></span></label></div>
+      </fieldset>
+      <p class="form-error" role="alert" data-error hidden></p>
+      <div class="send">
+        <button class="btn btn-dark" type="submit" data-submit><span data-mode="google"><span data-l="zh">送出</span><span data-l="en">Send</span></span><span data-mode="mail"><span data-l="zh">用 Email 寄出</span><span data-l="en">Send by email</span></span></button>
+        <p class="send-note" data-note><span data-mode="google"><span data-l="zh">送出後我會收到通知，盡快回信。</span><span data-l="en">I’m notified as soon as you send it.</span></span><span data-mode="mail"><span data-l="zh">會打開你的郵件軟體，內容已經填好。</span><span data-l="en">This opens your email app with everything filled in.</span></span></p>
+      </div>
+      <div class="sent" data-sent hidden tabindex="-1">
+        <h2 class="h3"><span data-l="zh">已經收到，謝謝。</span><span data-l="en">Got it, thank you.</span></h2>
+        <p><span data-l="zh">我看過之後回信給你。</span><span data-l="en">I’ll read it and reply to you.</span></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="section ways" aria-labelledby="ways-h">
+  <div class="wrap">
+    <div class="section-head"><h2 class="h2" id="ways-h" data-reveal><span data-l="zh">常見的合作方式</span><span data-l="en">Common projects</span></h2><p class="lead" data-reveal><span data-l="zh">挑一種，表單會幫你勾好。</span><span data-l="en">Pick one and the form ticks it for you.</span></p></div>
+    <ul class="ways-grid" role="list">
+      <li data-reveal><a class="card" href="contact.html?type=brand#form" data-pick="brand"><div class="card-pic"><img src="assets/img/vv-fellow-0.webp" alt="" loading="lazy" decoding="async"></div><div class="card-body"><h3 class="h3"><span data-l="zh"><span class="nowrap">單支品牌或</span><span class="nowrap">產品影片</span></span><span data-l="en">A single brand or product film</span></h3></div></a></li>
+      <li data-reveal><a class="card" href="contact.html?type=course#form" data-pick="course"><div class="card-pic"><img src="assets/img/latte-main-0.webp" alt="" loading="lazy" decoding="async"></div><div class="card-body"><h3 class="h3"><span data-l="zh"><span class="nowrap">線上課程的</span><span class="nowrap">拍攝與剪輯</span></span><span data-l="en">Shooting and editing an online course</span></h3></div></a></li>
+      <li data-reveal><a class="card" href="contact.html?type=shorts#form" data-pick="shorts"><div class="card-pic"><img src="assets/img/bci-ogsm-card.webp" alt="" loading="lazy" decoding="async"></div><div class="card-body"><h3 class="h3"><span data-l="zh"><span class="nowrap">一系列短影音，</span><span class="nowrap">從企劃到剪輯</span></span><span data-l="en">A series of shorts, from planning to edit</span></h3></div></a></li>
+      <li data-reveal><a class="card" href="contact.html?type=ai#form" data-pick="ai"><div class="card-pic"><img src="assets/img/bci-0827-3.webp" alt="" loading="lazy" decoding="async" style="object-position: 50% 40%"></div><div class="card-body"><h3 class="h3"><span data-l="zh"><span class="nowrap">用 AI 流程，</span><span class="nowrap">一次做好幾個版本</span></span><span data-l="en">Several versions at once, with an AI workflow</span></h3></div></a></li>
+    </ul>
+  </div>
+</section>
+</main>
+<footer class="foot">
+  <div class="wrap foot-in">
+    <div class="foot-name"><b>Ray Hsieh 謝岱霖</b><p><span data-l="zh">台北的品牌行銷人。行銷素材、品牌頻道、短影音。</span><span data-l="en">A brand marketer in Taipei: marketing content, brand channels, short-form video.</span></p></div>
+    <div><h2 class="foot-h"><span data-l="zh">網站</span><span data-l="en">Site</span></h2><ul role="list"><li><a href="work.html"><span data-l="zh">作品</span><span data-l="en">Work</span></a></li><li><a href="about.html"><span data-l="zh">關於</span><span data-l="en">About</span></a></li><li><a href="contact.html"><span data-l="zh">聯絡</span><span data-l="en">Contact</span></a></li></ul></div>
+    <div><h2 class="foot-h"><span data-l="zh">聯絡</span><span data-l="en">Contact</span></h2><ul role="list"><li><a href="mailto:rrrayhsieh@gmail.com?subject=%E4%BD%9C%E5%93%81%E9%9B%86%E4%BE%86%E4%BF%A1" data-href-en="mailto:rrrayhsieh@gmail.com?subject=Portfolio%20enquiry">rrrayhsieh@gmail.com</a></li><li><a href="https://www.linkedin.com/in/tailinhsieh" rel="noopener" target="_blank">LinkedIn</a></li></ul></div>
+    <p class="legal"><span data-l="zh">© 2026 謝岱霖。作品版權屬於各品牌與客戶。</span><span data-l="en">© 2026 Tai Lin (Ray) Hsieh. The works belong to their brands and clients.</span></p>
+  </div>
+</footer>
+<script src="assets/js/form-config.js?v=1e632b9d" defer></script>
+<script src="assets/js/site.js?v=4b51cf04" defer></script>
+</body>
+</html>
