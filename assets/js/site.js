@@ -341,12 +341,11 @@
     });
   }
 
-  /* ---------- entrances: nothing is ever hidden; what enters the screen later rises into place ---------- */
-  var EASE = 'cubic-bezier(0.2, 0.7, 0.2, 1)';
+  /* ---------- entrances: nothing is ever hidden; what enters the screen later rises into place (the move is .rise in site.css) ---------- */
   function rise(el) {
-    if (reduce.matches || !el.animate) return;
-    el.animate([{ opacity: 0, transform: 'translateY(24px)' }, { opacity: 1, transform: 'none' }],
-      { duration: 550, delay: (+el.getAttribute('data-order') || 0) * 70, easing: EASE, fill: 'backwards' });
+    if (reduce.matches) return;
+    el.style.setProperty('--order', el.getAttribute('data-order') || 0);
+    el.classList.add('rise');
   }
   if ('IntersectionObserver' in window) {
     var io = new IntersectionObserver(function (entries) {
