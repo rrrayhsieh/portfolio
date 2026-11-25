@@ -91,7 +91,7 @@ html[data-lang="en"] [data-l="zh"] { display: none !important; }
 .logo { display: flex; align-items: center; margin-right: auto; font-weight: 600; font-size: 17px; }
 .nav-links { display: flex; align-items: center; gap: 4px; font-size: var(--t-body); }
 .nav-links > a { padding: 8px 12px; border-radius: 8px; color: var(--muted); transition: background-color 160ms var(--ease), color 160ms var(--ease); }
-.nav-links > a:hover, .nav-links > a[aria-current="page"] { background: rgba(26, 26, 25, 0.06); color: var(--ink); }
+.nav-links > a:hover, .nav-links > a[aria-current] { background: rgba(26, 26, 25, 0.06); color: var(--ink); } /* "page", or "true" on a case inside the work section */
 .lang { display: inline-flex; gap: 2px; margin: 0 8px; padding: 4px; border-radius: var(--r-sm); background: rgba(26, 26, 25, 0.06); }
 .lang button { min-width: 44px; min-height: 32px; padding: 0 12px; border: 0; border-radius: var(--r-tag); background: transparent; color: var(--muted); font-size: var(--t-meta); cursor: pointer; transition: background-color 160ms var(--ease), color 160ms var(--ease); }
 html[data-lang="zh"] .lang [data-set-lang="zh"],
@@ -259,6 +259,8 @@ html[data-lang="en"] .case-facts > div { grid-template-columns: 5.5em 1fr; }
 .case-facts dt { color: var(--soft); }
 .case-facts dd { color: var(--ink); }
 .case-text .btn { margin-top: auto; }
+.case-text .case-btns { margin-top: auto; display: flex; flex-wrap: wrap; gap: 8px; } /* a card with a case study: two buttons, still at the foot */
+.case-text .case-btns .btn { margin-top: 0; }
 /* the first and the last work span the row, their picture beside their text; the pairs sit between them */
 @media (min-width: 1001px) {
   .cases > .case:is(:first-child, :last-child) { grid-column: 1 / -1; flex-direction: row; }
@@ -274,6 +276,21 @@ html[data-lang="en"] .case-facts > div { grid-template-columns: 5.5em 1fr; }
 .other .card-body { padding: 16px 20px 20px; }
 .other h3 { font-size: var(--t-body); font-weight: 500; line-height: 1.4; }
 .other p { margin-top: 4px; font-size: var(--t-meta); }
+
+/* ================================================================ case studies (case-*.html) */
+.case-hero { margin-top: 32px; overflow: hidden; }
+.case-hero img { display: block; width: 100%; aspect-ratio: 21 / 9; object-fit: cover; object-position: 50% 35%; }
+.figures.four { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.case-list { display: grid; gap: 12px; max-width: 42em; }
+.case-list li { position: relative; padding-left: 20px; }
+.case-list li::before { content: ""; position: absolute; left: 2px; top: 0.72em; width: 6px; height: 6px; border-radius: 50%; background: var(--soft); }
+.case-videos { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+.case-more { margin-top: 24px; }
+/* a short list would leave half the width empty: heading on the left, list on the right */
+@media (min-width: 1001px) {
+  .case-split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 48px; align-items: start; }
+  .case-split .section-head { margin-bottom: 0; }
+}
 
 /* ================================================================ contact */
 .contact { position: relative; padding-top: clamp(56px, 7vw, 96px); }
@@ -386,6 +403,7 @@ fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
   .picks > :first-child .card-pic { flex: none; aspect-ratio: 16 / 9; min-height: 0; }
   .contact-in { grid-template-columns: 1fr; }
   .form { max-width: 720px; }
+  .figures.four { grid-template-columns: 1fr 1fr; }
 }
 
 /* ---------- phone ---------- */
@@ -418,6 +436,9 @@ fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
   .why { grid-template-columns: 1fr; }
   .figures { grid-template-columns: 1fr 1fr; }
   .figures > div:last-child { grid-column: 1 / -1; }
+  .figures.four > div:last-child { grid-column: auto; } /* four figures fill two rows of two */
+  .case-hero img { aspect-ratio: 16 / 9; }
+  .case-videos { grid-template-columns: 1fr; }
   .jobs li { grid-template-columns: 1fr; gap: 2px; }
   .next-card { flex-direction: column; align-items: flex-start; }
 

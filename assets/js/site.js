@@ -6,7 +6,7 @@
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)');
   var works = window.WORKS || {};
   var MAIL = 'rrrayhsieh@gmail.com';
-  var PAGES = /^(index|about|work|contact)\.html(?=$|[?#])/;
+  var PAGES = /^(index|about|work|contact|case-[a-z-]+)\.html(?=$|[?#])/; // the four pages and the case studies
 
   function lang() { return d.getAttribute('data-lang') === 'en' ? 'en' : 'zh'; }
   function pick(pair) { return pair ? pair[lang() === 'en' ? 1 : 0] : ''; }
