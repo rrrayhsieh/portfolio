@@ -185,11 +185,14 @@
 
   /* ---------- work: three kinds, one list ---------- */
   var filterBtns = document.querySelectorAll('[data-filter]');
+  var moreFold = document.querySelector('[data-more]'); // the folded rest of the work
   function applyFilter(f) {
     filterBtns.forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-filter') === f)); });
     document.querySelectorAll('[data-cat]').forEach(function (el) {
       el.hidden = f !== 'all' && el.getAttribute('data-cat') !== f;
     });
+    // one kind alone is a short list, so show all of that kind, folded or not
+    if (moreFold && f !== 'all') moreFold.open = true;
   }
   if (filterBtns.length) {
     filterBtns.forEach(function (b) { b.addEventListener('click', function () { applyFilter(b.getAttribute('data-filter')); }); });

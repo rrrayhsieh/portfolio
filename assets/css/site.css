@@ -110,6 +110,7 @@ html.menu-open .menu-btn .m2 { transform: translateY(-4px) rotate(-45deg); }
 .h3 { font-size: var(--t-h3); font-weight: 500; line-height: 1.3; }
 html[data-lang="zh"] .h1, html[data-lang="zh"] .h2 { letter-spacing: 0; }
 .lead { font-size: var(--t-lead); color: var(--muted); }
+.lead strong { color: var(--ink); font-weight: 500; } /* the one line a recruiter must not miss */
 .section { padding-top: var(--section); }
 .section-head { max-width: 640px; margin-bottom: 40px; }
 .section-head .lead { margin-top: 12px; }
@@ -186,12 +187,13 @@ html:not(.js) .step-line { max-height: none; opacity: 1; margin-top: 4px; }
 .picks > :first-child h3 { font-size: var(--t-h3); }
 .picks p { margin-top: 4px; font-size: var(--t-meta); color: var(--muted); }
 
-/* the closing card: one action, and the three kinds of project as quiet links */
+/* the closing card: the CV and a way to get in touch, with the three kinds of project as quiet links */
 .next { padding-top: var(--section); }
 .next-card { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: clamp(28px, 5vw, 56px); }
 .next-types { margin-top: 12px; color: var(--muted); }
 .next-types a { color: var(--ink); text-decoration: underline; text-decoration-color: rgba(26, 26, 25, 0.3); text-underline-offset: 4px; transition: text-decoration-color 160ms var(--ease); }
 .next-types a:hover { text-decoration-color: var(--ink); }
+.next-btns { display: flex; flex-wrap: wrap; gap: 8px; flex: none; }
 
 /* ================================================================ about */
 .intro { position: relative; padding-top: clamp(56px, 7vw, 96px); }
@@ -265,6 +267,10 @@ html[data-lang="en"] .case-facts > div { grid-template-columns: 5.5em 1fr; }
 
 .more { padding-top: clamp(80px, 8vw, 112px); }
 .more-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+/* the rest of the work stays folded behind one button; choosing a filter opens it */
+.more-fold > summary { list-style: none; cursor: pointer; }
+.more-fold > summary::-webkit-details-marker { display: none; }
+.more-fold[open] > summary { display: none; }
 .other .card-body { padding: 16px 20px 20px; }
 .other h3 { font-size: var(--t-body); font-weight: 500; line-height: 1.4; }
 .other p { margin-top: 4px; font-size: var(--t-meta); }
@@ -277,6 +283,7 @@ html[data-lang="en"] .case-facts > div { grid-template-columns: 5.5em 1fr; }
 .direct a { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 16px 20px; border: 1px solid var(--line); border-radius: var(--r-md); background: rgba(255, 255, 255, 0.75); overflow-wrap: anywhere; transition: border-color 160ms var(--ease); }
 .direct a:hover { border-color: rgba(26, 26, 25, 0.35); }
 .direct small { display: block; font-size: var(--t-meta); color: var(--soft); }
+.direct-cv { margin-top: 16px; } /* the CV as the about page's button, not a third outlined box */
 .direct svg { width: 18px; height: 18px; flex: none; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 /* common projects: four choices that tick the form; the cards of one row share one height, however their titles wrap */
 .ways-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
@@ -285,6 +292,7 @@ html[data-lang="en"] .case-facts > div { grid-template-columns: 5.5em 1fr; }
 .ways-grid .card-body { padding: 20px 24px 24px; }
 
 .form { display: grid; gap: 24px; padding: clamp(24px, 3.4vw, 40px); }
+.form-head p { margin-top: 8px; color: var(--muted); }
 .row2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
 fieldset { min-width: 0; margin: 0; padding: 0; border: 0; }
 .field label:not(.chips label), .field legend { display: block; margin-bottom: 8px; padding: 0; font-size: var(--t-body); font-weight: 500; }
